@@ -1,0 +1,46 @@
+<div class="container">
+     <app-header></app-header> 
+     <hr/>
+     <router-outlet></router-outlet>
+    <!-- <app-messages></app-messages> -->
+    
+    <!-- <app-messages></app-messages>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <strong class="col-md-8 col-md-offset-2">== Após Reestruturação ==</strong>
+            <app-message-input></app-message-input>
+            <app-message-list></app-message-list>
+            <strong class="col-md-8 col-md-offset-2">== Após Reestruturação ==</strong>
+            <!-
+            <input type="text" [(ngModel)]="message.content"/>
+            <input type="text" [(ngModel)]="message.author"/>->
+            
+            <app-message [messageVarClasse]="messageBinding"></app-message>
+            <app-message [messageVarClasse]="messageBindingAlias"></app-message>
+            <p class="text-center"><strong>== Com MessageBInding ==</strong></p>
+            <app-message [messageVarClasse]="msg" *ngFor="let msg of messageS"></app-message>
+            <button (click)="onMudaMostrarElemento()">Me maceta!</button>
+            {{mostrarElemento}}
+            <div *ngIf="mostrarElemento">
+               <p>Bernardo Sarmento Gostoso Inteligente</p>
+               <select id="cboCidades">
+                <option value="d2">dust_2</option>
+                <option value="vix">Vitória</option>
+                <option value="vv">Vila Velha</option>
+               </select>
+            </div>
+
+            <button (click)="valorNgSwitch=1">Selecione - 1</button>
+            <button (click)="valorNgSwitch=2">Selecione - 2</button>
+            <button (click)="valorNgSwitch=3">Selecione - 3</button>
+            <h5>Você selecionou : {{valorNgSwitch}}</h5>
+
+            <div [ngSwitch]="valorNgSwitch">
+                <div *ngSwitchCase="1">1. Template - <b>{{valorNgSwitch}}</b></div>
+                <div *ngSwitchCase="2">2. Template - <b>{{valorNgSwitch}}</b></div>
+                <div *ngSwitchCase="3">3. Template - <b>{{valorNgSwitch}}</b></div>
+                <div *ngSwitchCase>Default Template</div>
+            </div>
+        </div>
+    </div> -->
+</div>

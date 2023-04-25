@@ -1,0 +1,22 @@
+<h1>SIGN-IN</h1>
+<div class="col-md-8 col-md-offset-2">
+    <form [formGroup] = "myForm" (ngSubmit) = "onSubmit()">
+        <div class="form-group">
+            <label for="firstName">Nome:</label>
+            <input type="text" id="firstName" class="form-control" formControlName = "firstNameTS">
+        </div>
+        <div class="form-group">
+            <label for="lastName">SobreNome:</label>
+            <input type="text" id="lastName" class="form-control" formControlName = "lastNameTS">
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" class="form-control" formControlName = "emailTs">
+        </div>
+        <div class="form-group">
+            <label for="pass">Senha:</label>
+            <input type="password" id="pass" class="form-control" formControlName = "passwordTS">
+        </div>
+        <button class="btn btn-primary" type="submit" [disabled] = "!myForm.valid">Cadastrar</button>
+    </form>
+</div>
