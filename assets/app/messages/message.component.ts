@@ -2,6 +2,7 @@ import { Component, Input, Output, EventEmitter } from "@angular/core";
 import { Message } from "./message.model";
 import { MessageService } from "./message.services";
 
+
 @Component({
     selector: 'app-message',
     templateUrl: './message.component.html',
