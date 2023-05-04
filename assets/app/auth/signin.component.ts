@@ -2,20 +2,28 @@
 import { Component } from "@angular/core";
 import { FormControl, FormGroup, Validators } from "@angular/forms";
 
+import { AuthService } from "./auth.service";
+
 @Component({
     selector: 'app-signin',
-    templateUrl: './signin-component.html'
+    templateUrl: './signin-component.html',
 })
 
-export class SigninComponent{
-    myForm : FormGroup;
+export class SigninComponent {
+    myForm: FormGroup;
 
-    onSubmit(){
-        console.log(this.myForm);
-        this.myForm.reset();
+    constructor(private authService: AuthService) {}
+
+    onSubmit() {
+        const { emailTS, passwordTS } = this.myForm.value
+        this.authService.login(emailTS, passwordTS).subscribe(
+            dadosSucesso => console.log(dadosSucesso),
+            erro => console.log(erro)
+        )
+        this.myForm.reset()
     }
 
-    ngOnInit(){
+    ngOnInit() {
         this.myForm = new FormGroup({
             emailTS: new FormControl(null, [
                 Validators.required,

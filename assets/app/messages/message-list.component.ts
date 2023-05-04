@@ -1,5 +1,7 @@
-import { Component } from "@angular/core";
+import { Component, OnInit} from "@angular/core";
 import { Message } from "./message.model";
+
+import { MessageService } from "./message.services"
 
 @Component({
     selector: 'app-message-list',
@@ -9,12 +11,22 @@ import { Message } from "./message.model";
             (editClicked_MessageMetodoClasse)="msg.content = $event"
             *ngFor="let msg of messageS">
         </app-message>
-    </div>`
+    </div>`,
+    providers: [MessageService]
 })
 
-export class MessageListComponent{
-    messageS: Message[] = [
-        new Message("user1", "Texto 1", "", ""),
-        new Message("user2", "Texto 2", "", ""),
-    ]
+export class MessageListComponent implements OnInit {
+
+    constructor(private messageService: MessageService) {}
+
+    messageS: Message[] = []
+
+    ngOnInit(): void {
+        this.messageService.getMessages()
+        .subscribe(
+                (dadosSucesso: Message[]) => {console.log(dadosSucesso); this.messageS = dadosSucesso;}
+                ,
+                dadosErro => console.log(dadosErro)
+            )
+    }
 }

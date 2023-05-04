@@ -10,12 +10,28 @@
             <input type="text" id="lastName" class="form-control" formControlName = "lastNameTS">
         </div>
         <div class="form-group">
+            <label for="genre">Gênero:</label>
+            <select class="form-control" id="genre" formControlName="genreTS">
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Feminino</option>
+                <option value="outro">Outros</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="birthday">Data de nascimento:</label>
+            <input type="date" class="form-control" id="birthday" formControlName="birthdayTS">
+        </div>
+        <div class="form-group">
             <label for="email">Email:</label>
             <input type="email" id="email" class="form-control" formControlName = "emailTS">
         </div>
         <div class="form-group">
             <label for="pass">Senha:</label>
             <input type="password" id="pass" class="form-control" formControlName = "passwordTS">
+        </div>
+        <div class="form-group">
+            <input type="checkbox" id="terms" formControlName="termsTS">
+            <label for="terms">Concordo com os termos de uso</label>
         </div>
         <button class="btn btn-primary" type="submit" [disabled] = "!myForm.valid">Cadastrar</button>
     </form>

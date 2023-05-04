@@ -3,11 +3,11 @@
     <form [formGroup] = "myForm" (ngSubmit)="onSubmit()">
         <div class="form-group">
             <label for="email">Email:</label>
-            <input type="email" id ="email" class="form-control" formControlName = "emailTs">
+            <input type="email" id ="email" class="form-control" formControlName = "emailTS">
         </div>
         <div class="form-group">
             <label for="pass">Senha:</label>
-            <input type="password" id ="pass" class="form-control" formControlName = "passwordTs">
+            <input type="password" id ="pass" class="form-control" formControlName = "passwordTS">
             </div>
             <button class="btn btn-primary" type="submit" [disabled]="!myForm.valid">Logar</button>
     </form>

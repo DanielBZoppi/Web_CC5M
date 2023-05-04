@@ -1,13 +1,15 @@
 import { Component } from '@angular/core';
 import { Message } from './messages/message.model';
 import { MessageService } from './messages/message.services';
+import { AuthService } from './auth/auth.service';
 
 @Component({
     selector: 'my-app',
     templateUrl: './app.component.html',
-    providers : [MessageService]
+    providers : [MessageService, AuthService]
 })
 export class AppComponent {
+    /*
     valorNgSwitch: number;
     nomeNgSwitch: string = "";
 
@@ -21,5 +23,5 @@ export class AppComponent {
     messageS: Message[] = [
         new Message("user1", "Texto 1", "", ""),
         new Message("user2", "Texto 2", "", ""),
-    ]
+    ]*/
 }

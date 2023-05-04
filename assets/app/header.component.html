@@ -1,14 +1,9 @@
-<header clas ="row">
-    <nav clas=" col-md-8 col-md-ooffset-2">
-    <ul calss="nav nav-pills">
-        <li routerLinkActive = 'active'>
-            <a [routerLink] = "['/mensagens']">Mensagem</a>
-        </li>
-        <li routerLinkActive = 'active'>
-            <a [routerLink] = "['/autenticacao']">Autenticação</a>
-        </li>
-
-    </ul>
-
+<header class="row">
+    <nav class="col-md-8 col-md-offset-2">
+        <ul class="nav nav-tabs">
+            <li routerLinkActive="active"><a [routerLink]="['/mensagens']">Mensagens</a></li>
+            <li routerLinkActive="active"><a [routerLink]="['/autenticacao']">Autenticação</a></li>
+            <li routerLinkActive="active"><a [routerLink]="['/perfil']">Perfil</a></li>
+        </ul>
     </nav>
 </header>
