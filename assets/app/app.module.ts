@@ -15,6 +15,7 @@ import { SignupComponent } from './auth/signup.component';
 import { LogoutComponent } from './auth/logout.component';
 import { HeaderComponent } from './header.component';
 import { CatalogoComponent } from './livro/catalogo-component';
+import { CarrinhoComponent } from './livro/carrinho-component';
 
 @NgModule({
     declarations: [
@@ -29,6 +30,7 @@ import { CatalogoComponent } from './livro/catalogo-component';
         SignupComponent,
         LogoutComponent,
         CatalogoComponent,
+        CarrinhoComponent,
     ],
     imports: [BrowserModule, FormsModule, myrouting, ReactiveFormsModule, HttpModule],
     bootstrap: [AppComponent]
