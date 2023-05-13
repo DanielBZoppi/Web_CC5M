@@ -6,6 +6,174 @@ import { FormControl, FormGroup, Validators } from "@angular/forms";
 @Component({
     selector: 'app-carrinho',
     templateUrl: './carrinho-component.html',
+    styles: [`/* Reset styles */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      /* Global styles */
+      body {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        background-color: #f5f5f5;
+      }
+      
+      a {
+        color: #333;
+        text-decoration: none;
+      }
+      
+      a:hover {
+        text-decoration: underline;
+      }
+      
+      /* Header styles */
+      header {
+        background-color: #fff;
+        color: #333;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      
+      header a {
+        font-size: 20px;
+        font-weight: bold;
+      }
+      
+      header ul {
+        display: flex;
+        list-style: none;
+      }
+      
+      header ul li {
+        margin-right: 20px;
+      }
+      
+      header ul li:last-child {
+        margin-right: 0;
+      }
+      
+      header ul li a {
+        color: #333;
+      }
+      
+      header ul li a:hover {
+        color: #4CAF50;
+      }
+      
+      /* Main styles */
+      main {
+        margin-top: 20px;
+        padding: 20px;
+      }
+      
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      
+      h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+      
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+      }
+      
+      thead {
+        background-color: #f1f1f1;
+        font-weight: bold;
+      }
+      
+      th, td {
+        padding: 10px;
+        text-align: left;
+      }
+      
+      th:last-child, td:last-child {
+        text-align: right;
+      }
+      
+      tbody tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+      
+      .product {
+        display: flex;
+        align-items: center;
+      }
+      
+      .product img {
+        width: 80px;
+        margin-right: 20px;
+      }
+      
+      .product h3 {
+        font-size: 18px;
+        margin-bottom: 5px;
+      }
+      
+      .product p {
+        margin-bottom: 10px;
+      }
+      
+      .product button {
+        background-color: transparent;
+        border: none;
+        color: #4CAF50;
+        cursor: pointer;
+      }
+      
+      input[type="number"] {
+        width: 60px;
+        padding: 5px;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        text-align: center;
+      }
+      
+      tfoot {
+        font-weight: bold;
+      }
+      
+      tfoot td:last-child {
+        font-size: 20px;
+      }
+      
+      .checkout {
+        background-color: #4CAF50;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+      }
+      
+      .checkout:hover {
+        background-color: #3e8e41;
+      }
+      
+      /* Footer styles */
+      footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
+      
+      footer p {
+        font-size: 14px;
+      }`]
 
 })
 
