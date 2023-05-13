@@ -1,64 +1,11 @@
 <!DOCTYPE html>
-<<<<<<< HEAD
-<html ng-app="livrosApp">
-
-<head>
-  <title>Catálogo de Livros</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
-  <script>
-    var app = angular.module('livrosApp', []);
-
-    app.controller('LivrosController', function ($scope, $http) {
-      $scope.livros = [];
-
-      $http.get('/livros')
-        .then(function (response) {
-          $scope.livros = response.data;
-        })
-        .catch(function (error) {
-          console.log('Erro ao obter os livros:', error);
-        });
-
-      $scope.adicionarAoCarrinho = function (livro) {
-        // Lógica para adicionar ao carrinho
-        console.log('Livro adicionado ao carrinho:', livro);
-      };
-    });
-  </script>
-</head>
-
-<body ng-controller="LivrosController">
-  <h1>Catálogo de Livros</h1>
-
-  <table>
-    <tr>
-      <th>Título</th>
-      <th>Autor</th>
-      <th>Gênero</th>
-      <th></th>
-    </tr>
-    <tr ng-repeat="livro in livros">
-      <td>{{ livro.titulo }}</td>
-      <td>{{ livro.autor }}</td>
-      <td>{{ livro.genero }}</td>
-      <td>
-        <button ng-click="adicionarAoCarrinho(livro)">Adicionar ao Carrinho</button>
-      </td>
-    </tr>
-  </table>
-</body>
-
-</html>
-
-
-=======
 <html>
 <head>
 	<title>Book Shopping Online Store</title>
 	<link rel="stylesheet" href="../../../public/stylesheets/livro.css">
 </head>
 <body>
-	<header>
+	<!-- <header>
 		<h1>Book Shopping Online Store</h1>
 		<nav>
 			<ul>
@@ -68,26 +15,26 @@
 				<li><a href="#">Contact Us</a></li>
 			</ul>
 		</nav>
-	</header>
+	</header> -->
 
 	<main>
 		<section>
 			<h2>Featured Books</h2>
 			<ul class="books">
 				<li>
-					<img src="book1.jpg" alt="Book 1">
+					<img src="https://m.media-amazon.com/images/I/71IxSpJOUtL._SX619_BO1,204,203,200_.jpg" alt="Book 1">
 					<h3>Book 1 Title</h3>
 					<p>Book 1 Description</p>
 					<button>Add to Cart</button>
 				</li>
 				<li>
-					<img src="book2.jpg" alt="Book 2">
+					<img src="https://a-static.mlcdn.com.br/800x560/livro-turma-da-monica-jovem-75/sintomaticalivraria/193360/c8596e2ff9ce98b810cd150298ee05d1.jpg" alt="Book 2">
 					<h3>Book 2 Title</h3>
 					<p>Book 2 Description</p>
 					<button>Add to Cart</button>
 				</li>
 				<li>
-					<img src="book3.jpg" alt="Book 3">
+					<img src="https://a-static.mlcdn.com.br/800x560/livro-naruto-gold-vol-66/livrariavanguarda/287451/a63a393f7b63b0200f9ec297c398bbe7.jpg" alt="Book 3">
 					<h3>Book 3 Title</h3>
 					<p>Book 3 Description</p>
 					<button>Add to Cart</button>
@@ -99,19 +46,19 @@
 			<h2>Popular Books</h2>
 			<ul class="books">
 				<li>
-					<img src="book4.jpg" alt="Book 4">
+					<img src="https://comicvine.gamespot.com/a/uploads/scale_medium/13/136525/5977324-1.jpg" alt="Book 4">
 					<h3>Book 4 Title</h3>
 					<p>Book 4 Description</p>
 					<button>Add to Cart</button>
 				</li>
 				<li>
-					<img src="book5.jpg" alt="Book 5">
+					<img src="https://m.media-amazon.com/images/I/51HW0wQziGL.jpg" alt="Book 5">
 					<h3>Book 5 Title</h3>
 					<p>Book 5 Description</p>
 					<button>Add to Cart</button>
 				</li>
 				<li>
-					<img src="book6.jpg" alt="Book 6">
+					<img src="https://m.media-amazon.com/images/I/51rw7Tzu+YL._SX331_BO1,204,203,200_.jpg" alt="Book 6">
 					<h3>Book 6 Title</h3>
 					<p>Book 6 Description</p>
 					<button>Add to Cart</button>
@@ -125,4 +72,4 @@
 	</footer>
 </body>
 </html>
->>>>>>> 306ef61846045e9e3496cf4177af23fda7eaf9f5
+
