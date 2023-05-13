@@ -1,4 +1,57 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
+<html ng-app="livrosApp">
+
+<head>
+  <title>Catálogo de Livros</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+  <script>
+    var app = angular.module('livrosApp', []);
+
+    app.controller('LivrosController', function ($scope, $http) {
+      $scope.livros = [];
+
+      $http.get('/livros')
+        .then(function (response) {
+          $scope.livros = response.data;
+        })
+        .catch(function (error) {
+          console.log('Erro ao obter os livros:', error);
+        });
+
+      $scope.adicionarAoCarrinho = function (livro) {
+        // Lógica para adicionar ao carrinho
+        console.log('Livro adicionado ao carrinho:', livro);
+      };
+    });
+  </script>
+</head>
+
+<body ng-controller="LivrosController">
+  <h1>Catálogo de Livros</h1>
+
+  <table>
+    <tr>
+      <th>Título</th>
+      <th>Autor</th>
+      <th>Gênero</th>
+      <th></th>
+    </tr>
+    <tr ng-repeat="livro in livros">
+      <td>{{ livro.titulo }}</td>
+      <td>{{ livro.autor }}</td>
+      <td>{{ livro.genero }}</td>
+      <td>
+        <button ng-click="adicionarAoCarrinho(livro)">Adicionar ao Carrinho</button>
+      </td>
+    </tr>
+  </table>
+</body>
+
+</html>
+
+
+=======
 <html>
 <head>
 	<title>Book Shopping Online Store</title>
@@ -72,3 +125,4 @@
 	</footer>
 </body>
 </html>
+>>>>>>> 306ef61846045e9e3496cf4177af23fda7eaf9f5
