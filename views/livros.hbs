@@ -5,6 +5,16 @@
 	<link rel="stylesheet" type="text/css" href="/stylesheets/livro.css">
 </head>
 <body> 
+	<header class="row">
+	<nav class="col-md-8 col-md-offset-2">
+		<ul class="nav nav-tabs">
+			<li><a href='/mensagens'>Mensagens</a></li>
+			<li><a href='/autenticacao'>Autenticação</a></li>
+			<li><a href='/livros'>livro</a></li>
+			<li><a href='/cart'>Carrinho</a></li>
+		</ul>
+	</nav>
+	</header>
 	<main>
 		<section>
 			<h2><strong>Livraria Rosalivros</strong></h2>
@@ -13,7 +23,7 @@
 			{{# each livros}}
 				<li>
 					{{# each this}}
-					<img src="{{ this.imagePath }}" alt="Book 1">
+					<img src="{{ this.imagePath }}">
 					<h3>{{ this.title }}</h3>
 					<p>{{ this.description }}</p>
                     <td>${{ this.price }}</td> 
