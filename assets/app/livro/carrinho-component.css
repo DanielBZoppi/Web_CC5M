@@ -90,9 +90,9 @@
     text-align: left;
   }
   
-  th:last-child, td:last-child {
+  /* th:last-child, td:last-child {
     text-align: right;
-  }
+  } */
   
   tbody tr:nth-child(even) {
     background-color: #f9f9f9;
