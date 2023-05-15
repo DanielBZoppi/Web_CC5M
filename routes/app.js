@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-
+var Livros = require('../models/livro');
 var User = require("../models/user");
 
 
@@ -55,6 +55,12 @@ router.post('/register', function (req, res, next) {
 
 router.get('/user', function (req, res, next) {
     res.render('user', { user: { name: "Harry" } });
+});
+
+router.get('/livros', function (req, res, next) {
+    Livros.find(function(err, docs){
+        res.render('livros', { livros: docs});
+    });
 });
 
 module.exports = router; 
