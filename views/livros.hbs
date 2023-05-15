@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Book Shopping Online Store</title>
-	<link rel="stylesheet" type="text/css" href="../public/stylesheets/livro.css">
+	<link rel="stylesheet" type="text/css" href="/stylesheets/livro.css">
 </head>
 <body> 
 	<main>
@@ -10,20 +10,20 @@
 			<h2><strong>Livraria Rosalivros</strong></h2>
 			
 			<ul class="books">
-			{{# each products}}
+			{{# each livros}}
 				<li>
 					{{# each this}}
-					<img src={{livros.Im}} alt="Book 1">
-					<h3>One Pice</h3>
-					<p>Melhor Anime Ja Criado por Eiichiro Oda</p>
-                    <td>$19.99</td> 
+					<img src="{{ this.imagePath }}" alt="Book 1">
+					<h3>{{ this.title }}</h3>
+					<p>{{ this.description }}</p>
+                    <td>${{ this.price }}</td> 
 					<button>Add to Cart</button>
 					{{/each}}
 				</li>
 			{{/each}}
 		</section>
 
-		<section>
+		{{!-- <section>
 			<h2><strong>Livros Populares</strong></h2>
 			<ul class="books">
 				<li>
@@ -50,7 +50,7 @@
 					<button>Add to Cart</button> 
 				</li>
 			</ul>
-		</section>
+		</section> --}}
 	</main>
 
 	<footer>

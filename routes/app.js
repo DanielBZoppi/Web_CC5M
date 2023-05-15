@@ -59,7 +59,12 @@ router.get('/user', function (req, res, next) {
 
 router.get('/livros', function (req, res, next) {
     Livros.find(function(err, docs){
-        res.render('livros', { livros: docs});
+        var livrosChunks = [];
+        var chunkSize = 1;
+        for (var i = 0; i < docs.length; i += chunkSize){
+            livrosChunks.push(docs.slice(i, i + chunkSize));
+        }
+        res.render('livros', { livros: livrosChunks});
     });
 });
 
