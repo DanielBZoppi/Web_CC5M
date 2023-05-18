@@ -87,7 +87,7 @@
   
   th, td {
     padding: 10px;
-    text-align: left;
+
   }
   
   /* th:last-child, td:last-child {
@@ -138,6 +138,10 @@
   
   tfoot td:last-child {
     font-size: 20px;
+  }
+  .Total{
+    padding-right: 200px;
+    text-align: left;
   }
   
   .checkout {

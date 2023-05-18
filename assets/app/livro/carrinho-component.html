@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shopping Cart</title>
   <link rel="stylesheet" href="../../../public/stylesheets/carrinho.css">
 </head>
+
 <body>
   <!-- <header>
     <div class="container">
@@ -33,43 +35,29 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr *ngFor="let item of Data">
             <td>
               <div class="product">
-                <img src="https://m.media-amazon.com/images/I/71IxSpJOUtL._SX619_BO1,204,203,200_.jpg" alt="Book">
+                <img [src]="item.livro.imagePath" alt="Book">
                 <div class="product-details">
-                  <h3>The Lean Startup</h3>
-                  <p>by Eric Ries</p>
-                  <button>Remove</button>
+                  <h3>{{ item.livro.title }}</h3>
+                  <p>{{ item.livro.description }}</p>
+                  <button (click)='deleteCarrinho(item._id)'>Remove</button>
                 </div>
               </div>
             </td>
-            <td>$19.99</td>
-            <td>$19.99</td>
-          </tr>
-          <tr>
-            <td>
-              <div class="product">
-                <img src="https://m.media-amazon.com/images/I/51HW0wQziGL.jpg" alt="Book">
-                <div class="product-details">
-                  <h3>The 7 Habits of Highly Effective People</h3>
-                  <p>by Stephen Covey</p>
-                  <button>Remove</button>
-                </div>
-              </div>
-            </td>
-            <td>$14.99</td>
-            <td>$14.99</td>
+            <td>${{ item.livro.price }}</td>
+            <td>${{ item.livro.price }}</td>
           </tr>
         </tbody>
         <tfoot>
           <tr>
-            <td colspan="3">Total:</td>
-            <td>$34.98</td>
+            <td colspan="2">Total:</td>
+            <td class="Total">${{this.preco}}</td>
           </tr>
         </tfoot>
       </table>
-      <button class="checkout">Checkout</button>
+      <button class="checkout" >Checkout</button>
     </div>
   </main>
 
@@ -79,4 +67,5 @@
     </div>
   </footer>
 </body>
+
 </html>

@@ -13,7 +13,10 @@
   }
 
   td{
-    padding: 10px;
+    margin: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #3e8e41;
   }
 
   a {
