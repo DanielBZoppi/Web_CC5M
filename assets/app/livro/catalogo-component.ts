@@ -11,13 +11,6 @@ import { LivroService } from "./livro.service";
 @Component({
   selector: "app-catalogo",
   templateUrl: "./catalogo-component.html",
-  // template: `
-  // <div class="col-md8 col-md-offset-2">
-  //         <app-catalogo [messageVarClasse]="imagePath"
-  //         (editClicked_MessageMetodoClasse)="imagePath.content = $event"
-  //         *ngFor="let msg of messageS">
-  //     </app-catalogo>
-  // </div>`,
   styleUrls: ["catalogo-component.css"],
 })
 export class CatalogoComponent {
@@ -36,7 +29,6 @@ export class CatalogoComponent {
       (data) => {
         this.Data = data;
         console.log(data);
-        // Faça algo com a lista de itens aqui
       },
       (error) => {
         console.error("Erro ao obter a lista de itens:", error);
