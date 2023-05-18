@@ -137,7 +137,7 @@ router.delete("/deleteCarrinho/:id", async function (req, res) {
           res.status(500).json({ message: 'Erro ao excluir o Livro' });
         } else {
           if (Livro) {
-            res.json({ message: 'Livro excluído com sucesso' });
+            res.json({ message: 'Livro excluído com sucesso, atualize a pagina.' });
           } else {
             res.status(404).json({ message: 'Livro não encontrado' });
           }
